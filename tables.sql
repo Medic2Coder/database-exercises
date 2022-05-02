@@ -1,4 +1,5 @@
-show databases;
+show
+databases;
 /*can run one line at a time or entire file*/
 /*when you get to number 5 just click green run button*/
 
@@ -6,17 +7,39 @@ show databases;
 /*rows represent records in the table*/
 /*create user table with email firstname lastname and dob*/
 /*TODO: check this code below:*/
-# create table users
-# (
-#     id        int          not null auto_increment,
-#     email     varchar(255) not null,
-#     firstname varchar(255) not null,
-#     lastname  varchar(255) not null,
-#     dob       date         not null,
-#     primary key (id)
-# );
+#
+create table users
+    #
+(
+    #
+    id
+    int
+    not
+    null
+    auto_increment,
+    #
+    email
+    varchar
+(
+    255
+) not null,
+    # firstname varchar
+(
+    255
+) not null,
+    # lastname varchar
+(
+    255
+) not null,
+    # dob date not null,
+    # primary key
+(
+    id
+)
+    # );
 /*TODO: Check these notes below:*/
-# //int is any whole number without decimal
+#
+//int is any whole number without decimal
 #     Float is any number with decimal
 #     varchar is any string
 #     date is any date
@@ -31,12 +54,30 @@ show databases;
 
 USE codeup_test_db;
 
-CREATE TABLE IF NOT EXISTS users (
-    id        int          not null auto_increment,
-    email     varchar(255) not null,
-    firstname varchar(255) not null,
-    lastname  varchar(255) not null,
-    dob       date         not null,
-    primary key (id)
-);
+CREATE TABLE IF NOT EXISTS users
+(
+    id
+    int
+    not
+    null
+    auto_increment,
+    email
+    varchar
+(
+    255
+) not null,
+    firstname varchar
+(
+    255
+) not null,
+    lastname varchar
+(
+    255
+) not null,
+    dob date not null,
+    primary key
+(
+    id
+)
+    );
 
