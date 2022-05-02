@@ -54,30 +54,13 @@ create table users
 
 USE codeup_test_db;
 
-CREATE TABLE IF NOT EXISTS users
-(
-    id
-    int
-    not
-    null
-    auto_increment,
-    email
-    varchar
-(
-    255
-) not null,
-    firstname varchar
-(
-    255
-) not null,
-    lastname varchar
-(
-    255
-) not null,
-    dob date not null,
-    primary key
-(
-    id
-)
-    );
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    PRIMARY KEY (id)
+);
 
