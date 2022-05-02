@@ -7,6 +7,11 @@ CREATE TABLE IF NOT EXISTS albums (
   artist VARCHAR(255) NOT NULL,
   title VARCHAR(255) NOT NULL,
   name VARCHAR(255) NOT NULL, # name of the album
-  release_date DATE NOT NULL,   # can also be INT unsigned
+  release_date DATE NOT NULL,   # can also be INT unsigned, int would be better if year, so change soon
   PRIMARY KEY (id)
 );
+
+SHOW TABLES;
+
+DESCRIBE albums;
+
