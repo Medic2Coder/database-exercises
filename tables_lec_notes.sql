@@ -26,4 +26,5 @@ create table users
 #     foreign key is the key that is used to link the table to another table
 #     unique is the field that is unique
 #     index is the field that is indexed
-#
+
+# null = absence of value
