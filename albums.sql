@@ -15,3 +15,5 @@ SHOW TABLES;
 
 DESCRIBE albums;
 
+
+
