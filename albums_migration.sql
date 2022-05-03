@@ -17,5 +17,9 @@ SHOW TABLES;
 
 DESCRIBE albums;
 
+# USE the codeup_test_db and use DESCRIBE and SHOW CREATE to verify that your albums table has been successfully created.
+
+
+
 
 
