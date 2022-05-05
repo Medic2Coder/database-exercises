@@ -39,4 +39,13 @@ VALUES ('New York', 'Yankees'),
        ('Toronto', 'Blue Jays')
 ON DUPLICATE KEY UPDATE city = VALUES(city), name = VALUES(name);
 
+INSERT INTO players (first_name, last_name, jersey_number, is_active, team_id)
+VALUES ('Joe', 'Thrash', 1, 1, 1),
+       ('COREY', 'SEGAR', 5, 1, 1),
+       ('JACK', 'Thrash', 3, 1, 1),
+       ('LUIS', 'GARCIA', 77, 2, 1)
+ON DUPLICATE KEY UPDATE first_name = VALUES(first_name), last_name = VALUES(last_name), jersey_number = VALUES(jersey_number), is_active = VALUES(is_active), team_id = VALUES(team_id);
+
+
+
 
