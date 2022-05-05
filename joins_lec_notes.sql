@@ -16,3 +16,14 @@ CREATE TABLE IF NOT EXISTS players
 
 );
 
+CREATE TABLE IF NOT EXISTS positions
+(
+    id   INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    position CHAR(2) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS players_positions
+(
+    player_id INT UNSIGNED NOT NULL,
+    position_id INT UNSIGNED NOT NULL
+);
