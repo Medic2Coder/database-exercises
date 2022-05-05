@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS players
     last_name     varchar(255)     NOT NULL,
     jersey_number INT UNSIGNED     NOT NULL,
     is_active     TINYINT UNSIGNED NOT NULL,
-    team_id       INT UNSIGNED     NOT NULL,
+    team_id       INT UNSIGNED,
     FOREIGN KEY (team_id) REFERENCES teams(id)
 
 );
@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS players
 CREATE TABLE IF NOT EXISTS positions
 (
     id   INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    position CHAR(2) NOT NULL
+    position CHAR(2) NOT NULL,
+    FOREIGN KEY (position) REFERENCES players(position)
 );
 
 CREATE TABLE IF NOT EXISTS players_positions
@@ -68,4 +69,8 @@ VALUES (1, 1),
 ON DUPLICATE KEY UPDATE player_id = VALUES(player_id), position_id = VALUES(position_id);
 
 
-
+SELECT CONTACT (P.first_name, P.last_name) AS 'Player'
+# from where
+       FROM players P
+#         make connect between tables
+JOIN teams AS t on p.teams_id = t.id
