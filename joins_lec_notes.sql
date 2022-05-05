@@ -46,6 +46,19 @@ VALUES ('Joe', 'Thrash', 1, 1, 1),
        ('LUIS', 'GARCIA', 77, 2, 1)
 ON DUPLICATE KEY UPDATE first_name = VALUES(first_name), last_name = VALUES(last_name), jersey_number = VALUES(jersey_number), is_active = VALUES(is_active), team_id = VALUES(team_id);
 
+INSERT INTO positions (position)
+VALUES ('SS'),
+       ('2B'),
+       ('3B'),
+       ('C'),
+       ('1B'),
+       ('LF'),
+       ('CF'),
+       ('RF'),
+       ('DH')
+ON DUPLICATE KEY UPDATE position = VALUES(position);
+
+
 
 
 
