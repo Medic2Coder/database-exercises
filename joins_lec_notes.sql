@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS players
     last_name     varchar(255)     NOT NULL,
     jersey_number INT UNSIGNED     NOT NULL,
     is_active     TINYINT UNSIGNED NOT NULL,
-    team_id       INT UNSIGNED     NOT NULL
+    team_id       INT UNSIGNED     NOT NULL,
+    FOREIGN KEY (team_id) REFERENCES teams(id)
 
 );
 
@@ -25,5 +26,17 @@ CREATE TABLE IF NOT EXISTS positions
 CREATE TABLE IF NOT EXISTS players_positions
 (
     player_id INT UNSIGNED NOT NULL,
-    position_id INT UNSIGNED NOT NULL
+    position_id INT UNSIGNED NOT NULL,
+    FOREIGN KEY (player_id) REFERENCES players(id),
+    FOREIGN KEY (position_id) REFERENCES positions(id)
 );
+
+INSERT INTO teams (city, name)
+VALUES ('New York', 'Yankees'),
+       ('Boston', 'Red Sox'),
+       ('Tampa Bay', 'Rays'),
+       ('Philadelphia', 'Phillies'),
+       ('Toronto', 'Blue Jays')
+ON DUPLICATE KEY UPDATE city = VALUES(city), name = VALUES(name);
+
+
